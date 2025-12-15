@@ -1,3 +1,4 @@
+
 public class Main {
 
     public static void main(String[] args) {
@@ -15,9 +16,9 @@ public class Main {
             s.bookRoom(2, 3, new Date("07/07/2026"), new Date("08/07/2026"));
             s.setRoom(1, RoomType.SUITE, 10000);
             s.printAll();
+            s.printAllUsers();
 
-        }
-        catch (IllegalArgumentException e) {
+        } catch (IllegalArgumentException e) {
             System.out.print(e + "\n");
         }
     }

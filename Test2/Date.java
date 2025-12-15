@@ -19,4 +19,9 @@ public class Date {
     public LocalDate getDate() {
         return this.date;
     }
+
+    public String getStringDate() {
+        return this.date.format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+    }
+
 }

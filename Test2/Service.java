@@ -66,7 +66,7 @@ public class Service {
     void printAll() {
         System.out.println("User Id\t|| Balance\t|| Number of Nights\t|| Checkin\t\t|| Checkout\t\t|| Room Type\t|| Number\t|| Price per night\t\t|| Total");
         for (Booking b : bookings) {
-            System.out.printf("%d\t|| %d\t\t|| %d\t\t\t|| %s\t\t|| %s\t\t|| %s\t|| %d\t\t|| %d\t\t\t\t|| %d\n", b.user.getId(), b.user.getBalance(), (int) b.duration, b.bookingTime.get(0).getDate(), b.bookingTime.get(1).getDate(), b.room.getType().name().toLowerCase(), b.room.getId(), b.room.getPrice(), b.total);
+            System.out.printf("%d\t|| %d\t\t|| %d\t\t\t|| %s\t\t|| %s\t\t|| %s\t|| %d\t\t|| %d\t\t\t\t|| %d\n", b.user.getId(), b.user.getBalance(), (int) b.duration, b.bookingTime.get(0).getStringDate(), b.bookingTime.get(1).getStringDate(), b.room.getType().name().toLowerCase(), b.room.getId(), b.room.getPrice(), b.total);
         }
     }
 

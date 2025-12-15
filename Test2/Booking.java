@@ -9,7 +9,6 @@ public class Booking {
     long duration;
     ArrayList<Date> bookingTime = new ArrayList<>();
 
-
     public Booking(User u, Room r, Date checkIn, Date checkOut, long duration) {
         this.user = u;
         this.room = r;

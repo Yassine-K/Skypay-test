@@ -34,11 +34,13 @@ public class Room {
         for (Date[] d : bookingTime) {
             long start = ChronoUnit.DAYS.between(checkIn.getDate(), d[0].getDate());
             long end = ChronoUnit.DAYS.between(checkOut.getDate(), d[0].getDate());
-            if (start >= 0 && end <= 0 )
+            if (start >= 0 && end <= 0) {
                 return 0;
+            }
             end = ChronoUnit.DAYS.between(checkOut.getDate(), d[1].getDate());
-            if (start <= 0 && end >= 0 )
+            if (start <= 0 && end >= 0) {
                 return 0;
+            }
         }
         this.bookingTime.add(new Date[]{checkIn, checkOut});
         return 1;
