@@ -16,7 +16,5 @@ public class Booking {
         this.duration = duration;
         this.bookingTime.add(checkIn);
         this.bookingTime.add(checkOut);
-        bookingTime.add(checkIn);
-        bookingTime.add(checkOut);
     }
 }

@@ -1,0 +1,16 @@
+Design Questions (Bonus)
+1/- Suppose we put all the functions inside the same service. Is this the
+recommended approach ? Please explain.
+
+No, it's not recommended to put all the functions inside the same service. I would've created a service for the users, rooms, and booking
+separately and create a Hotel entity to manage and link everything. This would dramaticaly improve the maintability of the code and makes
+future code extensions way easier.
+
+
+2/- In this design, we chose to have a function setRoom(..) that should
+not impact the previous bookings. What is another way ? What is your
+recommendation ? Please explain and justify.
+
+I would use a copy constructor to copy the room entity to preserve a snapshot of the room's data when it was booked. I would only update
+the rooms array and keep a hard copy of each room in the booking array.
+
